@@ -43,6 +43,14 @@ export class App {
             },
 
             {
+                route: 'category/:category',
+                name: 'category',
+                title: 'Category',
+                moduleId: PLATFORM.moduleName('./routes/category'),
+                nav: false
+            },
+
+            {
                 route: 'user/:username',
                 name: 'user',
                 title: 'User',
