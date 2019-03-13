@@ -72,6 +72,14 @@ export class App {
                 title: 'User Items',
                 moduleId: PLATFORM.moduleName('./routes/user-items'),
                 nav: false
+            },
+
+            {
+                route: 'dashboard/new',
+                name: 'new-item',
+                title: 'New Item',
+                moduleId: PLATFORM.moduleName('./routes/dashboard/new-item'),
+                nav: false
             }
         ]);
 
