@@ -64,6 +64,14 @@ export class App {
                 title: 'User',
                 moduleId: PLATFORM.moduleName('./routes/user'),
                 nav: false
+            },
+
+            {
+                route: 'user/:username/items',
+                name: 'userItems',
+                title: 'User Items',
+                moduleId: PLATFORM.moduleName('./routes/user-items'),
+                nav: false
             }
         ]);
 
