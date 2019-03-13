@@ -34,7 +34,21 @@ export class App {
         config.options.pushState = true;
 
         config.map([
-            { route: [''], name: 'home', title: 'Home', moduleId: PLATFORM.moduleName('./routes/home'), nav: true }
+            { 
+                route: [''], 
+                name: 'home', 
+                title: 'Home', 
+                moduleId: PLATFORM.moduleName('./routes/home'), 
+                nav: true 
+            },
+
+            {
+                route: 'user/:username',
+                name: 'user',
+                title: 'User',
+                moduleId: PLATFORM.moduleName('./routes/user'),
+                nav: false
+            }
         ]);
 
         config.addAuthorizeStep(AuthorizeStep);
