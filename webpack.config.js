@@ -18,13 +18,43 @@ const srcDir = path.resolve(__dirname, 'src');
 const nodeModulesDir = path.resolve(__dirname, 'node_modules');
 const baseUrl = '/';
 
-const cssRules = [
-  { loader: 'css-loader' },
-  {
-    loader: 'postcss-loader',
-    options: { plugins: () => [require('autoprefixer')({ browsers: ['last 2 versions'] })] }
-  }
-];
+const load = {
+    style: { loader: 'style-loader' },
+    css: { loader: 'css-loader' },
+    cssModules: {
+      loader: 'css-loader',
+      options: {
+        modules: true,
+        localIdentName: '[name]__[local]____[hash:base64:5]'
+      }
+    },
+    postCss: {
+      loader: 'postcss-loader',
+      options: { plugins: loadPostCssPlugins }
+    }
+};
+
+function loadPostCssPlugins() {
+    return [
+      require('postcss-normalize')(),
+      require('postcss-import')({
+        path: ['src/components/', 'styles/']
+      }),
+      require('postcss-global-import'),
+      require('precss')(),
+      require('postcss-nested')(),
+      require('postcss-advanced-variables')(),
+      require('postcss-custom-properties')(),
+      require('postcss-color-mod-function')(),
+      require('postcss-assets'),
+      require('postcss-hexrgba')(),
+      require('postcss-partial-import')(),
+      require('postcss-extend')(),
+      require('postcss-preset-env')({ browsers: ['last 2 versions'] }),
+      require('lost'),
+      require('autoprefixer')({ browsers: ['last 2 versions'] })
+    ];
+}
 
 module.exports = ({ production, server, extractCss, coverage, analyze, karma } = {}) => ({
   resolve: {
@@ -124,36 +154,41 @@ module.exports = ({ production, server, extractCss, coverage, analyze, karma } =
   devtool: production ? 'nosources-source-map' : 'cheap-module-eval-source-map',
   module: {
     rules: [
-      {
-        test: /\.css$/i,
-        issuer: [{ not: [{ test: /\.html$/i }] }],
-        use: extractCss ? [{
-          loader: MiniCssExtractPlugin.loader
+        {
+            test: /\.css$/i,
+            issuer: [{ not: [{ test: /\.html$/i }] }],
+            use: [
+                production ? MiniCssExtractPlugin.loader : load.style,
+                load.cssModules,
+                load.postCss
+            ]
         },
-          'css-loader'
-        ] : ['style-loader', ...cssRules]
-      },
-      {
-        test: /\.css$/i,
-        issuer: [{ test: /\.html$/i }],
-        use: cssRules
-      },
-      { test: /\.html$/i, loader: 'html-loader' },
-      { test: /\.ts$/, loader: "ts-loader" },
-      { test: /\.(png|gif|jpg|cur)$/i, loader: 'url-loader', options: { limit: 8192 } },
-      { test: /\.woff2(\?v=[0-9]\.[0-9]\.[0-9])?$/i, loader: 'url-loader', options: { limit: 10000, mimetype: 'application/font-woff2' } },
-      { test: /\.woff(\?v=[0-9]\.[0-9]\.[0-9])?$/i, loader: 'url-loader', options: { limit: 10000, mimetype: 'application/font-woff' } },
-      { test: /\.(ttf|eot|svg|otf)(\?v=[0-9]\.[0-9]\.[0-9])?$/i, loader: 'file-loader' },
-      ...when(coverage, {
-        test: /\.[jt]s$/i, loader: 'istanbul-instrumenter-loader',
-        include: srcDir, exclude: [/\.{spec,test}\.[jt]s$/i],
-        enforce: 'post', options: { esModules: true },
-      })
+        {
+            test: /\.css$/i,
+            issuer: [{ test: /\.html$/i }],
+            use: [load.css, load.postCss]
+        },
+        { test: /\.html$/i, loader: 'html-loader' },
+        { test: /\.ts$/, loader: "ts-loader" },
+        { test: /\.(png|gif|jpg|cur)$/i, loader: 'url-loader', options: { limit: 8192 } },
+        { test: /\.woff2(\?v=[0-9]\.[0-9]\.[0-9])?$/i, loader: 'url-loader', options: { limit: 10000, mimetype: 'application/font-woff2' } },
+        { test: /\.woff(\?v=[0-9]\.[0-9]\.[0-9])?$/i, loader: 'url-loader', options: { limit: 10000, mimetype: 'application/font-woff' } },
+        { test: /\.(ttf|eot|svg|otf)(\?v=[0-9]\.[0-9]\.[0-9])?$/i, loader: 'file-loader' },
+        ...when(coverage, {
+            test: /\.[jt]s$/i, loader: 'istanbul-instrumenter-loader',
+            include: srcDir, exclude: [/\.{spec,test}\.[jt]s$/i],
+            enforce: 'post', options: { esModules: true },
+        })
     ]
   },
   plugins: [
     ...when(!karma, new DuplicatePackageCheckerPlugin()),
-    new AureliaPlugin(),
+    new AureliaPlugin({
+        features: {
+          ie: false,
+          svg: false
+        }
+    }),
     new ProvidePlugin({}),
     new ModuleDependenciesPlugin({
       'aurelia-testing': ['./compile-spy', './view-spy']
