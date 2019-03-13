@@ -5,7 +5,7 @@ import { Store, dispatchify, rehydrateFromLocalStorage } from 'aurelia-store';
 import { State } from 'store/state';
 import { Subscription } from 'rxjs';
 import { autoinject } from 'aurelia-framework';
-import { login } from 'store/actions';
+import './store/store';
 
 @autoinject()
 export class App {
