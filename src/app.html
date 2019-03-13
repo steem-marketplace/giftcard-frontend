@@ -1,9 +1,9 @@
 <template>
-    <require from="./components/app-menu"></require>
-  
-    <main id="main">
-      <app-menu router.bind="router" state.bind="state" role="complementary"></app-menu>
-  
-      <router-view swap-order="after" class="page"></router-view>
+    <require from="./components/app-header"></require>
+
+    <main>
+        <app-header router.bind="router" state.bind="state" role="complementary" id="main-header"></app-header>
+
+        <router-view swap-order="after"></router-view>
     </main>
 </template>  

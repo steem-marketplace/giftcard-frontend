@@ -1,11 +1,11 @@
 import { State } from 'store/state';
 
-import styles from './app-menu.css';
+import styles from './app-header.css';
 
 import { bindable, customElement } from 'aurelia-framework';
 
-@customElement('app-menu')
-export class AppMenu {
+@customElement('app-header')
+export class AppHeader {
     private styles = styles;
 
     @bindable private router;
