@@ -1,0 +1,77 @@
+{
+  "name": "giftcard-frontend",
+  "type": "project:application",
+  "bundler": {
+    "id": "webpack",
+    "displayName": "Webpack"
+  },
+  "httpProtocol": {
+    "id": "http2",
+    "displayName": "HTTP/2"
+  },
+  "build": {
+    "options": {
+      "server": "dev",
+      "extractCss": "prod",
+      "coverage": false
+    }
+  },
+  "platform": {
+    "id": "web",
+    "displayName": "Web",
+    "hmr": false,
+    "open": false,
+    "port": 8080,
+    "output": "dist"
+  },
+  "loader": {
+    "id": "none",
+    "displayName": "None"
+  },
+  "transpiler": {
+    "id": "typescript",
+    "displayName": "TypeScript",
+    "fileExtension": ".ts"
+  },
+  "markupProcessor": {
+    "id": "none",
+    "displayName": "None",
+    "fileExtension": ".html"
+  },
+  "cssProcessor": {
+    "id": "postcss",
+    "displayName": "PostCSS",
+    "fileExtension": ".css"
+  },
+  "jsonProcessor": {
+    "id": "none",
+    "displayName": "None",
+    "fileExtension": ".json"
+  },
+  "editor": {
+    "id": "vscode",
+    "displayName": "Visual Studio Code"
+  },
+  "features": {},
+  "unitTestRunner": {
+    "id": "jest",
+    "displayName": "Jest"
+  },
+  "integrationTestRunner": {
+    "id": "none",
+    "displayName": "None"
+  },
+  "paths": {
+    "root": "src",
+    "resources": "resources",
+    "elements": "resources/elements",
+    "attributes": "resources/attributes",
+    "valueConverters": "resources/value-converters",
+    "bindingBehaviors": "resources/binding-behaviors"
+  },
+  "testFramework": {
+    "id": "jasmine",
+    "displayName": "Jasmine"
+  },
+  "packageManager": "yarn"
+}
