@@ -51,6 +51,14 @@ export class App {
             },
 
             {
+                route: 'view/:id',
+                name: 'view',
+                title: 'View',
+                moduleId: PLATFORM.moduleName('./routes/single'),
+                nav: false
+            },
+
+            {
                 route: 'user/:username',
                 name: 'user',
                 title: 'User',
