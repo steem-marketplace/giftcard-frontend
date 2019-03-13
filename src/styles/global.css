@@ -8,11 +8,17 @@
     -webkit-touch-callout: none
 }
 
+html {
+    height: 100%;
+}
+
 body {
     -moz-osx-font-smoothing: grayscale;
     -webkit-font-smoothing: antialiased;
     background-color: #FFF;
     color: #1E1E1E;
+    height: 100%;
+    overflow: hidden;
     text-rendering: optimizeLegibility;
     overflow: hidden;
     touch-action: manipulation;
@@ -21,4 +27,20 @@ body {
     word-wrap: break-word;
     overscroll-behavior-y: none;
     text-size-adjust: none
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+}
+
+#main-header {
+    background: #1E1E1E;
+    color: #FFF;
+    flex: 0 0 auto;
+}
+
+router-view {
+    flex: 1 1 auto;
+    overflow-y: auto;
 }
