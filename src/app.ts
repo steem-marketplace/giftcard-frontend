@@ -75,11 +75,21 @@ export class App {
             },
 
             {
+                route: 'dashboard',
+                name: 'dashboardHome',
+                title: 'Dashboard',
+                moduleId: PLATFORM.moduleName('./routes/dashboard/home'),
+                nav: false,
+                auth: true
+            },
+
+            {
                 route: 'dashboard/new',
                 name: 'new-item',
                 title: 'New Item',
                 moduleId: PLATFORM.moduleName('./routes/dashboard/new-item'),
-                nav: false
+                nav: false,
+                auth: true
             }
         ]);
 
