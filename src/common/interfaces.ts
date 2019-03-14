@@ -15,3 +15,10 @@ interface CoinMarketCapTickerInterface {
     percent_change_7d: string;
     last_updated: string;
 }
+
+interface UserInterface {
+    username: string;
+    userMeta: any;
+    balance: string;
+    type: string;
+}
