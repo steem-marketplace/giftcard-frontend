@@ -9,9 +9,7 @@
 }
 
 html {
-    font-size: 15px;
     height: 100%;
-    line-height: 1.15;
 }
 
 body {
@@ -21,7 +19,6 @@ body {
     color: #1E1E1E;
     height: 100%;
     font-family: 'Work Sans', sans-serif;
-    font-size: 1rem;
     margin: 0;
     overflow: hidden;
     text-rendering: optimizeLegibility;
@@ -40,19 +37,12 @@ main {
 }
 
 #main-header {
-    background: #1E1E1E;
-    color: #FFF;
     flex: 0 0 auto;
 }
 
 router-view {
     flex: 1 1 auto;
     overflow-y: auto;
-}
-
-.container {
-    margin: 0 auto;
-    max-width: 1140px;
 }
 
 .loud-heading {
@@ -68,4 +58,10 @@ router-view {
     font-weight: 400;
     margin: 5px 0 35px 0;
     opacity: 0.5;
+}
+
+.btn--lg,
+.btn-lg {
+    font-size: 16px;
+    line-height: 50px;
 }
