@@ -1,19 +1,114 @@
-.app-header {
-    align-items: center;
-    color: #1E1E1E;
-    display: flex;
-    justify-content: space-between;
-    padding: .5rem;
-    width: 100%;
-    z-index: 99;
+.logo {
+    border-right: 1px solid #ebedf2;
+    color: var(--primary);
+    padding: 22px 35px 22px 20px;
 }
 
-    .app-header a {
-        color: inherit;
+.menu {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.menu-container {
+    flex: 3;
+}
+
+.user-container {
+    flex: 2;
+}
+
+    .user-meta {
+        display: flex;
+        align-content: flex-end;
+        align-items: center;
     }
 
-.logo {
-    font-size: 24px;
-    font-weight: bold;
+.dropdown-menu {
+    padding-left: 35px;
+}
+
+.mainmenu {
+    border: none;
     margin: 0;
+    padding: 0;
+}
+
+.mainmenu .navbar-nav {
+    margin: 0;
+    padding: 0;
+}
+
+.mainmenu .navbar-nav > li {
+    display: inline-block;
+    padding: 17px 0;
+    margin-right: 40px;
+}
+
+.mainmenu .navbar-nav > li > a {
+    color: var(--primary);
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 42px;
+    padding: 0;
+    text-decoration: none;
+    text-transform: capitalize;
+}
+
+.has-dropdown a {
+    position: relative;
+}
+
+.has-dropdown a:before {
+    position: absolute;
+    content: "\f107";
+    font-family: FontAwesome;
+    font-size: 13px;
+    right: -13px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.has-dropdown .dropdown {
+    top: calc(100% + 20px);
+}
+
+.has-dropdown:hover .dropdown {
+    opacity: 1;
+    top: 100%;
+    visibility: visible;
+}
+
+.dropdown {
+    background: #FFF;
+    box-shadow: 0 0 40px rgba(82, 85, 90, .2);
+    min-width: 271px;
+    opacity: 0;
+    padding: 20px;
+    position: absolute;
+    visibility: hidden;
+    z-index: 3;
+}
+
+.dropdown:before {
+    content: '';
+    position: absolute;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-bottom: 10px solid #fff;
+    bottom: 100%;
+}
+
+.dropdown ul li {
+    display: block;
+    margin: 0;
+    padding: 0;
+}
+
+.dropdown ul li a {
+    border-radius: 3px;
+    font-weight: 400;
+    line-height: 44px;
+    padding: 0 10px;
+    text-transform: capitalize;
 }
