@@ -1,7 +1,9 @@
 .hero {
+    align-items: center;
     background: #6e4ff6;
+    display: flex;
+    justify-content: center;
     min-height: 500px;
-    padding-top: 6rem;
     text-align: center;
 }
 
