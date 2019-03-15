@@ -1,6 +1,7 @@
 .hero {
     background: #6e4ff6;
     min-height: 500px;
+    padding-top: 6rem;
     text-align: center;
 }
 
@@ -18,4 +19,24 @@
         line-height: 50px;
         outline: 0;
         padding: 0 20px;
+    }
+
+    .search-btn {
+        background-color: rgb(92, 59, 239);
+        border-radius: 0 3px 3px 0;
+        border: none;
+        cursor: pointer;
+        height: 60px;
+        padding: 0 25px;
+        min-width: auto;
+
+        &:hover,
+        &:focus,
+        &:active {
+            background-color: rgb(63, 35, 185) !important;
+        }
+
+        &:active {
+            border-color: rgb(63, 35, 185) !important;
+        }
     }
