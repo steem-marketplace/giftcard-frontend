@@ -1,0 +1,50 @@
+.product {
+    background: #FFF;
+    border-radius: 3px;
+    margin-bottom: 30px;
+    overflow: hidden;
+    position: relative;
+}
+
+.thumbnail {
+    border-radius: 4px 4px 0 0;
+    overflow: hidden;
+    position: relative;
+}
+
+.thumbnail figure {
+    margin: 0;
+    position: relative;
+}
+
+.excerpt {
+    border: 1px solid #ebedf2;
+    border-radius: 0 0 4px 4px;
+    padding: 25px 25px 25px;
+}
+
+    .excerpt h5 {
+        margin-bottom: 20px;
+    }
+        .excerpt h5 a {
+            color: inherit;
+            display: block;
+        }
+
+    .meta {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        flex-wrap: wrap;
+        list-style: none;
+    }
+
+    .meta li {
+        color: #b8bece;
+        margin-bottom: 8px;
+        margin-left: 0;
+    }
+
+    .meta li:last-child {
+        margin-right: 0;
+    }

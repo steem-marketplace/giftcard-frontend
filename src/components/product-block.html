@@ -1,0 +1,17 @@
+<template>
+    <div class="product">
+        <div class="thumbnail">
+            <figure>
+                <img src="${product.image}" class="img-fluid">
+            </figure>
+        </div>
+        <div class="excerpt">
+            <h5><a route-href="route: view; params.bind: { id: product.id }">${product.name} ($${product.price})</a></h5>
+            <ul class="meta">
+                <li>
+                    In <a href="#">Amazon Gift Cards</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</template>
