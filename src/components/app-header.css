@@ -1,4 +1,19 @@
+.app-header {
+    align-items: center;
+    color: #1E1E1E;
+    display: flex;
+    justify-content: space-between;
+    padding: .5rem;
+    width: 100%;
+    z-index: 99;
+}
+
+    .app-header a {
+        color: inherit;
+    }
+
 .logo {
     font-size: 24px;
     font-weight: bold;
+    margin: 0;
 }
