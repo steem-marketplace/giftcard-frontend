@@ -1,4 +1,6 @@
 <template>    
+    <require from="components/product-block"></require>
+
     <div class="hero">
         <div class="container">
             <div class="row">
@@ -20,5 +22,22 @@
             </div>
         </div>
     </div>
+
+    <section class="featured-products section-padded">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="section-title">
+                        <h1>Featured Listings</h1>
+                    </div>
+                </div>
+                <div class="col-md-12 product-list">
+                    <div class="row">
+                        <product-block class="col-lg-4 col-md-6" repeat.for="product of state.featuredProducts" product.bind="product"></product-block>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
 </template>
