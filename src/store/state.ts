@@ -15,7 +15,8 @@ export interface State {
         };
         reputation: any;
         valueInUsd: number;
-      };
+    };
+    featuredProducts: any[];
 }
 
 export const initialState: State = {
@@ -35,5 +36,6 @@ export const initialState: State = {
         },
         reputation: 0,
         valueInUsd: 0
-      }
+    },
+    featuredProducts: []
 };

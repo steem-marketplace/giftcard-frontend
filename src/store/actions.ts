@@ -41,6 +41,19 @@ export async function setUserMeta(state: State, data: any): Promise<State> {
     return newState;
 }
 
+export async function getFeaturedProducts(state: State): Promise<State> {
+    let newState = { ...state };
+
+    newState.featuredProducts = [
+        { id: 1, name: '$25 Amazon Gift Card', image: 'https://picsum.photos/350/224', price: 15.00 },
+        { id: 1, name: '$50 Best Buy Gift Card', image: 'https://picsum.photos/350/224', price: 40.00 },
+        { id: 1, name: '$100 Jb HiFi Gift Card', image: 'https://picsum.photos/350/224', price: 80.00 },
+    ];
+
+    return newState;
+}
+
 store.registerAction('login', login);
 store.registerAction('logout', logout);
 store.registerAction('setUserMeta', setUserMeta);
+store.registerAction('getFeaturedProducts', getFeaturedProducts);
