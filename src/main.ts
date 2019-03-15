@@ -6,6 +6,8 @@ import { PLATFORM } from 'aurelia-pal';
 
 import { initialState } from './store/state';
 
+import '!style-loader!css-loader!bootstrap/dist/css/bootstrap.css';
+import './styles/bootstrap-overrides.css';
 import '!style-loader!css-loader!./styles/global.css';
 
 export function configure(aurelia: Aurelia) {
