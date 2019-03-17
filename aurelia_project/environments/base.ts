@@ -1,4 +1,5 @@
 export const baseEnvironmentConfiguration = {
     brandingName: 'Steem Marketplace.',
-    marketplaceName: 'Gift Cards'
+    marketplaceName: 'Gift Cards',
+    defaultLocale: 'en-AU'
 };
