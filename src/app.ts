@@ -10,11 +10,16 @@ import { Subscription } from 'rxjs';
 import { autoinject } from 'aurelia-framework';
 import './store/store';
 
+import environment from './environment';
+
 @autoinject()
 export class App {
     private router: Router;
     private state: State;
     private subscription: Subscription;
+
+    private brandingName = environment.brandingName;
+    private marketplaceName = environment.marketplaceName;
 
     constructor(private store: Store<State>) {
         this.subscription = this.store.state.subscribe((state) => {
@@ -24,6 +29,8 @@ export class App {
                 AuthorizeStep.loggedIn = state.loggedIn;
             }
         });
+
+        console.log(environment);
     }
 
     // On initial load, rehydrate store from cache middleware
