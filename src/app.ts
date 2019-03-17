@@ -18,9 +18,6 @@ export class App {
     private state: State;
     private subscription: Subscription;
 
-    private brandingName = environment.brandingName;
-    private marketplaceName = environment.marketplaceName;
-
     constructor(private store: Store<State>) {
         this.subscription = this.store.state.subscribe((state) => {
             if (state) {
@@ -29,8 +26,6 @@ export class App {
                 AuthorizeStep.loggedIn = state.loggedIn;
             }
         });
-
-        console.log(environment);
     }
 
     // On initial load, rehydrate store from cache middleware
