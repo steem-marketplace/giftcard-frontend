@@ -60,7 +60,10 @@ module.exports = ({ production, server, extractCss, coverage, analyze, karma } =
   resolve: {
     extensions: ['.ts', '.js'],
     modules: [srcDir, 'node_modules'],
-    alias: { 'aurelia-binding': path.resolve(__dirname, 'node_modules/aurelia-binding') }
+    alias: { 
+        'aurelia-binding': path.resolve(__dirname, 'node_modules/aurelia-binding'),
+        'base-environment': path.resolve(__dirname, 'aurelia_project/environments/base') 
+    }
   },
   entry: {
     app: ['aurelia-bootstrapper']

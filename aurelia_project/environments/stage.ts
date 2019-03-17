@@ -1,4 +1,7 @@
+import { baseEnvironmentConfiguration } from 'base-environment';
+
 export default {
-  debug: true,
-  testing: false
-};
+    ...baseEnvironmentConfiguration,
+    debug: true,
+    testing: false
+} as any;

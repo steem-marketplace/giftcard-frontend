@@ -13,7 +13,12 @@
     "importHelpers": true,
     "lib": [
       "es2017", "dom"
-    ]
+    ],
+    "paths": {
+        "base-environment": [
+            "aurelia_project/environments/base"
+        ],
+    }
   },
   "include": [
     "./src/**/*.ts",
