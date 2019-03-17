@@ -1,8 +1,24 @@
 .logo {
     border-right: 1px solid #ebedf2;
     color: var(--primary);
+    font-family: 'league_spartanbold';
+    font-size: 27px;
+    font-weight: normal;
     padding: 22px 35px 22px 20px;
 }
+
+    .logo > a {
+        color: inherit;
+        text-decoration: none;
+    }
+
+    .sublogo {
+        color: #1E1E1E;
+        display: block;
+        font-family: 'Work Sans', sans-serif;
+        font-size: 13px;
+        font-weight: 500;
+    }
 
 .menu {
     display: flex;
