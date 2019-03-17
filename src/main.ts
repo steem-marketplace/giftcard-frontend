@@ -44,7 +44,8 @@ export function configure(aurelia: Aurelia) {
             loadPath: './locales/{{lng}}/{{ns}}.json',
           },
           attributes: aliases,
-          lng : 'en',
+          lng: environment.defaultLocale,
+          ns: ['headings'],
           defaultNS: 'translation',
           fallbackLng: 'en',
           debug : false
