@@ -1,3 +1,6 @@
+// Copyright (c) 2019 Dwayne Charrington <dwaynecharrington@gmail.com>
+// This code is licensed under MIT license (see LICENSE for details)
+
 import { PLATFORM } from 'aurelia-pal';
 import { RouterConfiguration, Router } from 'aurelia-router';
 import { AuthorizeStep } from './resources/pipeline-steps/auth-pipeline';
