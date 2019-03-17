@@ -13,4 +13,7 @@ export class AppHeader {
 
     @bindable private router;
     @bindable private state: State;
+
+    @bindable brandingName;
+    @bindable marketplaceName;
 }
