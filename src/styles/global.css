@@ -21,6 +21,10 @@ ul {
     margin: 0;
 }
 
+li {
+    list-style: none;
+}
+
 .loud-heading {
     color: #FFF;
     font-size: 36px;
@@ -63,3 +67,40 @@ ul {
         margin-bottom: 0;
         padding: 0 200px;
     }
+
+input[type=checkbox], input[type=radio] {
+    height: auto;
+}
+
+.form-control,
+input,
+input.form-control,
+select,
+select.form-control,
+textarea {
+    border: 1px solid #EBEDF2;
+    border-radius: 3px;
+    color: #747B86;
+    transition: 0.3s ease;
+}
+
+.form-group p.label, label {
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 26px;
+    text-transform: capitalize;
+}
+
+.custom-checkbox .custom-control-label {
+    color: #6B6E8A;
+    padding-left: 5px;
+}
+
+.custom-control-label::before {
+    background-color: #DEE2E6;
+    border: none;
+}
+
+.item-count {
+    float: right;
+}
