@@ -45,7 +45,7 @@ export function configure(aurelia: Aurelia) {
           },
           attributes: aliases,
           lng: environment.defaultLocale,
-          ns: ['translation', 'headings'],
+          ns: ['translation', 'headings', 'buttons'],
           defaultNS: 'translation',
           fallbackLng: 'en',
           debug : false
