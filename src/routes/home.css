@@ -1,6 +1,6 @@
 .hero {
     align-items: center;
-    background: #6e4ff6;
+    background: var(--primary);
     display: flex;
     justify-content: center;
     min-height: 500px;
@@ -24,7 +24,7 @@
     }
 
     .search-btn {
-        background-color: rgb(92, 59, 239);
+        background-color: var(--secondary);
         border-radius: 0 3px 3px 0;
         border: none;
         cursor: pointer;
@@ -35,10 +35,10 @@
         &:hover,
         &:focus,
         &:active {
-            background-color: rgb(63, 35, 185) !important;
+            background-color: var(--alternate) !important;
         }
 
         &:active {
-            border-color: rgb(63, 35, 185) !important;
+            border-color: var(--alternate) !important;
         }
     }
