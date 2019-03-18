@@ -6,8 +6,8 @@
 }
 
 body {
-    background-color: #FFF;
-    color: #1E1E1E;
+    background-color: var(--background);
+    color: var(--dark);
     font-family: 'Work Sans', sans-serif;
 }
 
@@ -29,7 +29,7 @@ ul {
 }
 
 .tagline {
-    color: #F3F3F3;
+    color: var(--off-white);
     font-size: 18px;
     font-weight: 400;
     margin: 5px 0 35px 0;
@@ -43,7 +43,7 @@ ul {
 }
 
 .section-padded {
-    background: #f1f2f7;
+    background: var(--off-white);
     padding: 100px 0;
 }
 
