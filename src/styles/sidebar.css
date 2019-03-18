@@ -1,0 +1,21 @@
+.sidebar-box {
+    background: #FFF;
+    border: 1px solid #EBEDF2;
+    border-radius: 4px;
+    margin-bottom: 30px;
+}
+
+.sidebar-box-title {
+    display: block;
+    margin-bottom: 0;
+    padding: 25px;
+}
+
+.sidebar-box-content {
+    padding: 15px 0;
+}
+
+    .sidebar-box-content li {
+        padding-left: 15px;
+        position: relative;
+    }
