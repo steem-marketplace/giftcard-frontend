@@ -12,7 +12,7 @@ import Backend from 'i18next-xhr-backend';
 import { initialState } from './store/state';
 
 import '!style-loader!css-loader!bootstrap/dist/css/bootstrap.css';
-import './styles/bootstrap-overrides.css';
+import './styles/variables.css';
 import '!style-loader!css-loader!./styles/global.css';
 
 export function configure(aurelia: Aurelia) {
