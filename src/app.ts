@@ -48,6 +48,22 @@ export class App {
             },
 
             {
+                route: 'buy',
+                name: 'buy',
+                title: 'Buy',
+                redirect: 'category/all',
+                nav: true
+            },
+
+            {
+                route: 'sell',
+                name: 'sell',
+                title: 'Sell',
+                redirect: 'dashboard/new',
+                nav: true
+            },
+
+            {
                 route: 'category/:category',
                 name: 'category',
                 title: 'Category',
