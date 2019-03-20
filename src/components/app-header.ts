@@ -13,4 +13,10 @@ export class AppHeader {
 
     @bindable private router;
     @bindable private state: State;
+
+    private searchOpen = false;
+
+    toggleSearch() {
+        this.searchOpen = !this.searchOpen;
+    }
 }

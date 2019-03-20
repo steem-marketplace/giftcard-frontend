@@ -32,6 +32,23 @@
                         <div class="user-container">
                             <div class="user-meta">
                                 
+                                <div class="search-wrapper">
+                                    <div class="search-component">
+                                        <span class="search-trigger fas ${searchOpen ? 'fa-times-circle' : 'fa-search'} fa-search" click.delegate="toggleSearch()"></span>
+
+                                        <div class="search ${searchOpen ? 'active' : ''}">
+                                            <form action="javascript:void(0);">
+                                                <div class="input-group input-group-custom">
+                                                    <span class="icon-left">
+                                                        <i class="fas fa-search"></i>
+                                                    </span>
+                                                    <input type="text" class="form-control search-field" placeholder="Wanna be searchin' something...">
+                                                </div>
+                                            </form>
+                                        </div>
+                                    </div>
+                                </div>
+
                             </div>
                         </div>
                     </div>
