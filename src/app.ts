@@ -64,7 +64,7 @@ export class App {
             },
 
             {
-                route: 'category/:category',
+                route: 'category/:category/:page?',
                 name: 'category',
                 title: 'Category',
                 moduleId: PLATFORM.moduleName('./routes/category'),
