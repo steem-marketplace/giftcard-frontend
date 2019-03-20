@@ -1,6 +1,6 @@
 # giftcard-frontend
 
-The front-end for the Steem Gift Card marketplace
+The front-end for the Steem Gift Card marketplace. Which will live at: https://gift.steem-marketplace.com when builds start to go live.
 
 ## Installation
 
@@ -13,6 +13,8 @@ npm install
 ```
 yarn
 ```
+
+This will install the needed package dependencies the application needs to run.
 
 ## Install Aurelia CLI
 
