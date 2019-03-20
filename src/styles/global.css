@@ -78,9 +78,11 @@ input.form-control,
 select,
 select.form-control,
 textarea {
-    border: 1px solid #EBEDF2;
+    border: 1px solid rgb(235, 237, 242);
     border-radius: 3px;
     color: #747B86;
+    height: 50px;
+    font-size: 16px;
     transition: 0.3s ease;
 }
 
