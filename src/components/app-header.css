@@ -52,7 +52,7 @@
 
 .search {
     position: absolute;
-    right: 60px;
+    right: 30px;
     opacity: 0;
     visibility: hidden;
     padding: 0 20px;
@@ -177,4 +177,106 @@
     line-height: 44px;
     padding: 0 10px;
     text-transform: capitalize;
+}
+
+.notifications {
+    padding: 0 45px 0 35px;
+    border-right: 1px solid #ebedf2;
+    border-left: 1px solid #ebedf2;
+}
+
+.notifications ul {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.notifications ul li {
+    margin-right: 35px;
+    padding: 34px 0;
+    position: relative;
+}
+
+.notifications ul li span:first-child {
+    font-size: 16px;
+    vertical-align: middle;
+}
+
+.notification-dropdown {
+    padding: 0;
+    right: -30px;
+    width: 370px;
+}
+
+.dropdown-header {
+    border-bottom: 1px solid #ebedf2;
+    overflow: hidden;
+    padding: 20px 25px;
+}
+
+.notification-content {
+    padding-bottom: 30px;
+}
+
+.notification {
+    overflow: hidden;
+    padding: 20px 30px;
+    border-bottom: 1px solid #ebedf2;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.notification-info {
+    align-items: center;
+    display: flex;
+    flex: 2;
+}
+
+.avatar {
+    height: 40px;
+    margin-right: 12px;
+    vertical-align: top;
+    width: 40px;
+}
+
+.avatar img {
+    border-radius: 50%;
+    max-width: 100%;
+    width: 100%;
+}
+
+.info {
+    width: calc(100% - 57px);
+}
+
+.info p {
+    color: #747A86;
+    font-size: 14px;
+    line-height: 23px;
+    margin: 0;
+}
+
+.info p span {
+    color: #000;
+    font-weight: 400;
+}
+
+.info p a {
+    display: block;
+}
+
+.info .time {
+    font-size: 13px;
+    color: #747A86;
+    margin-top: 0;
+}
+
+.notification-dropdown .notification {
+    padding: 15px 20px 10px;
+}
+
+.notification-icons {
+    
 }

@@ -1,4 +1,6 @@
 <template>
+    <require from="./notifications.html"></require>
+
     <div class="app-header">
 
         <div class="container-fluid">
@@ -49,23 +51,13 @@
                                     </div>
                                 </div>
 
+                                <notifications></notifications>
+
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-
-        <!-- <div class="branding">
-            <h1 class="heading logo">Gift Card Marketplace</h1>
-        </div>
-        
-        <div class="nav">
-            <ul>
-                <li repeat.for="row of router.navigation | authFilter: state.loggedIn" class="nav-item ${row.isActive ? 'active' : ''}">
-                    <a href.bind="row.href" class="navigation-link">${row.title}</a>
-                </li>
-            </ul>
-        </div> -->
     </div>
 </template>

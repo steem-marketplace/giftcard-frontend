@@ -1,0 +1,15 @@
+<template>
+    <div class="notification">
+        <div class="notification-info">
+            <div class="avatar" if.bind="avatar"><img src="${avatar}"></div>
+
+            <div class="info">
+                <p innerhtml.bind="text"></p>
+                <p class="time" if.bind="time">${time}</p>
+            </div>
+        </div>
+        <div class="notification-icons" if.bind="icon">
+            <i class="fas fa-${icon}"></i>
+        </div>
+    </div>
+</template>
