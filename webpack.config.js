@@ -208,9 +208,9 @@ module.exports = ({ production, server, extractCss, coverage, analyze, karma } =
     })),
     ...when(production || server, new CopyWebpackPlugin([
       { from: 'static', to: outDir, ignore: ['.*'] }])),
-      new CopyWebpackPlugin([
+    new CopyWebpackPlugin([
         { from: 'src/locales/', to: 'locales/' }
-      ]),
+    ]),
     ...when(analyze, new BundleAnalyzerPlugin())
   ]
 });

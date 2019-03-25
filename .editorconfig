@@ -13,3 +13,8 @@ indent_size = 4
 max_line_length = off
 trim_trailing_whitespace = false
 indent_size = 4
+
+[*.yml]
+max_line_length = off
+trim_trailing_whitespace = false
+indent_size = 2
