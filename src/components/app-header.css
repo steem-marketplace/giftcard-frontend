@@ -13,7 +13,7 @@
     }
 
     .sublogo {
-        color: #1E1E1E;
+        color: #797979;
         display: block;
         font-family: 'Work Sans', sans-serif;
         font-size: 13px;
@@ -88,6 +88,77 @@
 .icon-left {
     padding-top: 7px;
     display: none;
+}
+
+.user {
+    padding: 20px 20px 20px 35px;
+}
+
+.user img {
+    max-width: none;
+}
+
+.user-balance {
+    align-items: center;
+    border-bottom: 1px solid #ebedf2;
+    padding: 20px;
+}
+
+.user-balance .avatar {
+    margin-right: 12px;
+}
+
+.user-balance .avatar img {
+    max-width: 44px;
+}
+
+.user-balance-info p {
+    line-height: inherit;
+    margin: 0;
+}
+
+.user-balance-info .amount {
+    color: var(--primary);
+    font-size: 0.95rem;
+    font-weight: 500;
+}
+
+.dropdown.dropdown-user {
+    border: none;
+    padding: 0;
+    right: 0;
+}
+
+.dropdown.dropdown-user:before {
+    right: 30px;
+}
+
+.dropdown.dropdown-user ul {
+    padding: 20px;
+}
+
+.dropdown.dropdown-user ul li a {
+    border-radius: 4px;
+    color: var(--alternate);
+    display: block;
+    font-size: 0.95rem;
+    padding: 0 10px;
+    text-decoration: none;
+    transition: .3s;
+}
+
+.dropdown.dropdown-user ul li a:hover {
+    background: var(--primary);
+    color: #FFF;
+}
+
+.dropdown.dropdown-user ul li a:before {
+    content: "";
+}
+
+.dropdown.dropdown-user ul li a span {
+    float: none;
+    margin-right: 15px;
 }
 
 .dropdown-menu {

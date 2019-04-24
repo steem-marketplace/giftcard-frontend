@@ -50,7 +50,7 @@ export function configure(aurelia: Aurelia) {
           fallbackLng: 'en',
           debug : false
         });
-      });
+    });
 
     if (environment.debug) {
         aurelia.use.developmentLogging();
