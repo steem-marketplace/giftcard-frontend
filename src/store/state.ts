@@ -2,20 +2,24 @@
 // This code is licensed under MIT license (see LICENSE for details)
 
 export interface State {
-    loggedIn: boolean;
+    loading: boolean;
     user: {
-        id: number;
         name: string;
+        loggedIn: boolean;
+        accessToken: string;
+        refreshToken: string;
         marketBalance: number;
     };
     featuredProducts: any[];
 }
 
 export const initialState: State = {
-    loggedIn: false,
+    loading: false,
     user: {
-        id: null,
         name: '',
+        loggedIn: false,
+        accessToken: '',
+        refreshToken: '',
         marketBalance: 0
     },
     featuredProducts: []

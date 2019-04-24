@@ -4,10 +4,21 @@
 import { State } from './state';
 import store from './store';
 
-export async function login(state: State, user: any): Promise<State> {
+export function loading(state: State, boolean: boolean) {
+    const newState = { ...state };
+
+    newState.loading = Boolean(boolean);
+
+    return newState;
+}
+
+export async function login(state: State, user: { username: string, accessToken: string, refreshToken: string }): Promise<State> {
     let newState = { ...state };
 
-    newState.loggedIn = true;
+    newState.user.name = user.username;
+    newState.user.accessToken = user.accessToken;
+    newState.user.refreshToken = user.refreshToken;
+    newState.user.loggedIn = true;
 
     return newState;
 }
@@ -15,21 +26,13 @@ export async function login(state: State, user: any): Promise<State> {
 export async function logout(state: State): Promise<State> {
     const newState = { ...state };
 
-    newState.loggedIn = false;
-
     newState.user = {
-        id: null,
         name: '',
-        marketBalance: 0
+        accessToken: '',
+        refreshToken: '',
+        marketBalance: 0,
+        loggedIn: false
     };
-
-    return newState;
-}
-
-export async function setUserMeta(state: State, data: any): Promise<State> {
-    let newState = { ...state };
-
-    newState.user = {...newState.user, ...data};
 
     return newState;
 }
@@ -46,7 +49,7 @@ export async function getFeaturedProducts(state: State): Promise<State> {
     return newState;
 }
 
+store.registerAction('loading', loading);
 store.registerAction('login', login);
 store.registerAction('logout', logout);
-store.registerAction('setUserMeta', setUserMeta);
 store.registerAction('getFeaturedProducts', getFeaturedProducts);

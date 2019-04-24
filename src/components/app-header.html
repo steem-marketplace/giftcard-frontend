@@ -51,7 +51,9 @@
                                     </div>
                                 </div>
 
-                                <notifications></notifications>
+                                <a href="javascript:void(0);">Login</a>
+
+                                <notifications if.bind="state.loggedIn"></notifications>
 
                                 <div class="user has-dropdown" if.bind="state.loggedIn">
                                     <div class="avatar">

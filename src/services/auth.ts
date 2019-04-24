@@ -1,3 +1,4 @@
+import { dispatchify } from 'aurelia-store';
 import { I18N } from 'aurelia-i18n';
 import { autoinject, newInstance } from 'aurelia-framework';
 import { HttpClient, json } from 'aurelia-fetch-client';
@@ -6,6 +7,7 @@ import { ToastService, ToastMessage } from './toast';
 import steem from 'steem';
 
 import environment from 'environment';
+import { logout } from 'store/actions';
 
 @autoinject()
 export class AuthService {
@@ -182,5 +184,9 @@ export class AuthService {
         const obj = await res.json();
 
         return obj.access_token;
+    }
+
+    logout() {
+        dispatchify(logout)();
     }
 }
