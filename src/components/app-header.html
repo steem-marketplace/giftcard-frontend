@@ -53,19 +53,19 @@
 
                                 <notifications></notifications>
 
-                                <div class="user has-dropdown">
+                                <div class="user has-dropdown" if.bind="state.loggedIn">
                                     <div class="avatar">
-                                        <img src="https://steemitimages.com/u/beggars/avatar" class="rounded-circle">
+                                        <img src="https://steemitimages.com/u/${state.user.name}/avatar" class="rounded-circle">
                                     </div>
 
                                     <div class="dropdown dropdown-user">
                                         <div class="user-balance d-flex">
                                             <div class="avatar">
-                                                <img src="https://steemitimages.com/u/beggars/avatar" class="rounded-circle">
+                                                <img src="https://steemitimages.com/u/${state.user.name}/avatar" class="rounded-circle">
                                             </div>
                                             <div class="user-balance-info">
-                                                <p class="name">@beggars</p>
-                                                <p class="amount">502 MARKET</p>
+                                                <p class="name">@${state.user.name}</p>
+                                                <p class="amount">${state.user.marketBalance} MARKET</p>
                                             </div>
                                         </div>
 

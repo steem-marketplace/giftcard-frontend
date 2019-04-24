@@ -20,17 +20,7 @@ export async function logout(state: State): Promise<State> {
     newState.user = {
         id: null,
         name: '',
-        balance: '',
-        sbd_balance: '',
-        can_vote: false,
-        post_count: 0,
-        voting_power: 0,
-        voting_manabar: {
-            current_mana: '0',
-            last_update_time: 0
-        },
-        reputation: 0,
-        valueInUsd: 0
+        marketBalance: 0
     };
 
     return newState;
@@ -39,7 +29,7 @@ export async function logout(state: State): Promise<State> {
 export async function setUserMeta(state: State, data: any): Promise<State> {
     let newState = { ...state };
 
-    newState.user = data;
+    newState.user = {...newState.user, ...data};
 
     return newState;
 }

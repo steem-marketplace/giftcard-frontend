@@ -6,7 +6,7 @@
 import { Aurelia } from 'aurelia-framework'
 import environment from './environment';
 import { PLATFORM } from 'aurelia-pal';
-import { I18N, TCustomAttribute } from 'aurelia-i18n';
+import { TCustomAttribute } from 'aurelia-i18n';
 import Backend from 'i18next-xhr-backend';
 
 import { initialState } from './store/state';
