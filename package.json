@@ -22,6 +22,7 @@
     "bootstrap": "^4.3.1",
     "i18next": "^15.0.7",
     "i18next-xhr-backend": "^2.0.1",
+    "sscjs": "^0.0.7",
     "steem": "^0.7.4",
     "tslib": "^1.9.3"
   },
